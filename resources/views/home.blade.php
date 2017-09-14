@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a class="btn btn-info" href="{{ route('category.index') }}">Categories</a>
                 </div>
             </div>
         </div>
