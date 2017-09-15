@@ -20,13 +20,13 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
+            <th>Id</th>
             <th>Name</th>
         </tr>
     @foreach ($categories as $category)
     <tr>
-        <td>{{ ++$i }}</td>
-        <td>{{ $category->name}}</td>
+        <td>{{ $category->id }}</td>
+        <td>{{ $category->name }}</td>
     </tr>
     @endforeach
     </table>
