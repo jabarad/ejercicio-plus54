@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2>Add New Category</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
         </div>
     @endif
 
-    {!! Form::model($product, ['method' => 'PATCH','route' => ['product.update', $product->id],'files' => true]) !!}
-        @include('product.form', ['categories' => $categories, 'product' => $product])
+    {!! Form::open(array('route' => 'category.store','method'=>'POST')) !!}
+         @include('admin.category.form')
     {!! Form::close() !!}
 
 @endsection

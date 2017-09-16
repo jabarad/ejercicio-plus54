@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Product;
 use App\Category;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +18,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::latest("id")->paginate(5);
-        return view('product.index',compact('products'))
+        return view('admin.product.index',compact('products'))
             ->with('i', (request()->input('page', 1) - 1)* 5);
     }
 
@@ -30,7 +31,7 @@ class ProductController extends Controller
     {
         $categories = Category::pluck('name', 'id');
 
-        return view('product.create', compact('categories'));
+        return view('admin.product.create', compact('categories'));
     }
 
     /**
@@ -69,7 +70,7 @@ class ProductController extends Controller
     {
         $categories = Category::pluck('name', 'id');
 
-        return view('product.edit',compact('categories', 'product'));
+        return view('admin.product.edit',compact('categories', 'product'));
     }
 
     /**

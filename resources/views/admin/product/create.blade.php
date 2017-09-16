@@ -24,7 +24,7 @@
     @endif
 
     {!! Form::open(array('route' => 'product.store','method'=>'POST','files' => true)) !!}
-         @include('product.form', ['categories' => $categories])
+         @include('admin.product.form', ['categories' => $categories])
     {!! Form::close() !!}
 
 @endsection
