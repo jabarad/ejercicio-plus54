@@ -39,5 +39,5 @@
 
     {!! $products->links() !!}
 
-    <a class="btn btn-info" href="{{ route('home') }}">Back to Dashboard</a>
+    <br><a class="btn btn-info" href="{{ route('home') }}">Back to Dashboard</a>
 @endsection
