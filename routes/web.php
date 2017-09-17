@@ -27,3 +27,4 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/product/{id}', 'ProductController@show')->name('product.show');
 Route::get('/categories', 'CategoryController@list')->name('category.list');
 Route::get('/category/{id}', 'ProductController@listByCategory')->name('product.listByCategory');
+Route::match(['get', 'post'], '/products', 'ProductController@list')->name('product.list');
