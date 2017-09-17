@@ -7,7 +7,7 @@
                 <h2>Add New Product</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('admin.product.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    {!! Form::open(array('route' => 'product.store','method'=>'POST','files' => true)) !!}
+    {!! Form::open(array('route' => 'admin.product.store','method'=>'POST','files' => true)) !!}
          @include('admin.product.form', ['categories' => $categories])
     {!! Form::close() !!}
 

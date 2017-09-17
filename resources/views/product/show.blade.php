@@ -7,7 +7,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         @if (Auth::id() === $product->user->id)
-                            <a class="btn btn-primary" href="{{ route('product.edit',$product->id) }}">Edit</a>
+                            <a class="btn btn-primary" href="{{ route('admin.product.edit',$product->id) }}">Edit</a>
                         @else
                             <a class="btn btn-primary" href="#">Buy now</a>
                         @endif

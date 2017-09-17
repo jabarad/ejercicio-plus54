@@ -56,7 +56,7 @@ class ProductController extends Controller
         $request->photo->move(public_path('uploads/product'), $data['photo']);
 
         Product::create($data);
-        return redirect()->route('product.index')
+        return redirect()->route('admin.product.index')
                         ->with('success','Product created successfully');
     }
 
@@ -107,7 +107,7 @@ class ProductController extends Controller
         }
 
         $product->update($data);
-        return redirect()->route('product.index')
+        return redirect()->route('admin.product.index')
                         ->with('success','Product updated successfully');
     }
 
@@ -125,7 +125,7 @@ class ProductController extends Controller
         }
         
         Product::destroy($product->id);
-        return redirect()->route('product.index')
+        return redirect()->route('admin.product.index')
                         ->with('success','Product deleted successfully');
     }
 }

@@ -7,7 +7,7 @@
                 <h2>Add New Category</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('category.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('admin.category.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    {!! Form::open(array('route' => 'category.store','method'=>'POST')) !!}
+    {!! Form::open(array('route' => 'admin.category.store','method'=>'POST')) !!}
          @include('admin.category.form')
     {!! Form::close() !!}
 

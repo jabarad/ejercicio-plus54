@@ -7,7 +7,7 @@
                 <h2>Category List</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('category.create') }}"> Create New Category</a>
+                <a class="btn btn-success" href="{{ route('admin.category.create') }}"> Create New Category</a>
             </div>
         </div>
     </div>

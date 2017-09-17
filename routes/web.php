@@ -20,8 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::resource('admin/category','Admin\CategoryController');
-    Route::resource('admin/product','Admin\ProductController');
+    Route::resource('admin/category', 'Admin\CategoryController', ['as' => 'admin']);
+    Route::resource('admin/product', 'Admin\ProductController', ['as' => 'admin']);
 });
 
 Route::get('/product/{id}', 'ProductController@show')->name('product.show');

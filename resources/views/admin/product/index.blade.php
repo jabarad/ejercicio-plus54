@@ -7,7 +7,7 @@
                 <h2>Product List</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('product.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('admin.product.create') }}"> Create New Product</a>
             </div>
         </div>
     </div>
@@ -29,8 +29,8 @@
         <td>{{ $product->id }}</td>
         <td>{{ $product->name }}</td>
         <td>
-            <a class="btn btn-primary" href="{{ route('product.edit',$product->id) }}">Edit</a>
-            {!! Form::open(['method' => 'DELETE','route' => ['product.destroy', $product->id],'style'=>'display:inline']) !!}
+            <a class="btn btn-primary" href="{{ route('admin.product.edit',$product->id) }}">Edit</a>
+            {!! Form::open(['method' => 'DELETE','route' => ['admin.product.destroy', $product->id],'style'=>'display:inline']) !!}
             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
         </td>    </tr>

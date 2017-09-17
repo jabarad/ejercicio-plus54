@@ -7,7 +7,7 @@
                 <h2>Edit Product</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('product.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('admin.product.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
 
-    {!! Form::model($product, ['method' => 'PATCH','route' => ['product.update', $product->id],'files' => true]) !!}
+    {!! Form::model($product, ['method' => 'PATCH','route' => ['admin.product.update', $product->id],'files' => true]) !!}
         @include('admin.product.form', ['categories' => $categories, 'product' => $product])
     {!! Form::close() !!}
 
