@@ -24,6 +24,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('admin/product', 'Admin\ProductController', ['as' => 'admin']);
 });
 
+Route::get('/user/home', 'UserHomeController@index')->name('user.home');
+
 Route::get('/product/{id}', 'ProductController@show')->name('product.show');
 Route::get('/categories', 'CategoryController@list')->name('category.list');
 Route::get('/category/{id}', 'ProductController@listByCategory')->name('product.listByCategory');

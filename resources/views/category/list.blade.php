@@ -19,4 +19,6 @@
     </table>
 
     {!! $categories->links() !!}
+
+    <br><a class="btn btn-info" href="{{ route('user.home') }}">Back to Home</a>
 @endsection
